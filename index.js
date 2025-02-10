@@ -145,7 +145,7 @@ async function run() {
     // Get all resort data with a limit of 30 resorts
     app.get("/allResorts", async (req, res) => {
       try {
-        const resorts = await allResortDataCollection.find().limit(250).toArray();
+        const resorts = await allResortDataCollection.find().toArray();
         res.send(resorts);
       } catch (error) {
         console.error("Error fetching all resort data:", error);
